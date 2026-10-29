@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "expected_digests": {
+    "execution": "b8318ff8a3bdefc418e56746e2c315e459d1e7b10a05ac89c80c5171690f6600",
+    "target": "ab36f6eb535061df72f0e33589b588595f3617656c8dbcef29ea8d30936ba9fa"
+  },
+  "inputs": {
+    "deb:busybox": {
+      "path": "busybox_1.35.0-4+deb12u1+b1_arm64.deb",
+      "sha256": "a745b681c0c52e4e0f028e0dab7b85078de1199c1d86c7b4c12502061c24f297",
+      "size": 422504
+    },
+    "deb:libgcc-s1": {
+      "path": "libgcc-s1_12.2.0-14+deb12u1_arm64.deb",
+      "sha256": "576926b283613db80168ddf76380a3bd877602778cf0d226caa7bfbfa71eacf3",
+      "size": 34816
+    },
+    "deb:libstdc++6": {
+      "path": "libstdc++6_12.2.0-14+deb12u1_arm64.deb",
+      "sha256": "26e138c677a985775331373828a6c286c551ff397cb735d00e2383cb273d1cb2",
+      "size": 556608
+    },
+    "deb:libc6": {
+      "path": "libc6_2.36-9+deb12u14_arm64.deb",
+      "sha256": "01f4330719fd4f65580e16ea5a0527f372fca750e8f588d26deaf09f2d3b1cf4",
+      "size": 2324660
+    },
+    "deb:zlib1g": {
+      "path": "zlib1g_1.2.13.dfsg-1_arm64.deb",
+      "sha256": "52b8b8a145bbe1956bba82034f77022cbef0c3d0885c9e32d9817a7932fe1913",
+      "size": 82744
+    },
+    "deb:libgcc-12-dev": {
+      "path": "libgcc-12-dev_12.2.0-14+deb12u1_arm64.deb",
+      "sha256": "c83d28b7c3397c25f15ae17783fce78716a3d7cd415940940cc2af8dc4db8d6d",
+      "size": 955600
+    },
+    "deb:libstdc++-12-dev": {
+      "path": "libstdc++-12-dev_12.2.0-14+deb12u1_arm64.deb",
+      "sha256": "b74b18927037498c10c8c5dd7a0abe132b4d90188ca5d6e899a4f777c6d52a74",
+      "size": 2006588
+    },
+    "deb:libc6-dev": {
+      "path": "libc6-dev_2.36-9+deb12u14_arm64.deb",
+      "sha256": "8bc395bf2ee9939f1a6ae395f974cffdcf541d98f99adfe89ce7e4bef36d159e",
+      "size": 1435692
+    },
+    "deb:linux-libc-dev": {
+      "path": "linux-libc-dev_6.1.176-1_arm64.deb",
+      "sha256": "eeca5ec13bed7206f8171fab9a48e84119dcc20cc79557f104628447a524ad10",
+      "size": 2280448
+    },
+    "bisheng": {
+      "path": "bisheng-9.2.0-linux-aarch64.tar.gz",
+      "sha256": "f4a588f00ae4ccfb8f36e076dd8e698b7dcf4cf79bf26c12828cfa3fd103b938",
+      "size": 146867964
+    },
+    "elfuse": {
+      "path": "elfuse",
+      "sha256": "d19f7bf2fe0abe675e1bf729d1cb0c20e3eb6525319b0ddfc93d189919ffb253",
+      "size": 838848
+    },
+    "target-collection": {
+      "path": "collection-v3.tar.gz",
+      "sha256": "b9b087f7c1f1127354889c1bade212d93f429a847965ebc0bab4aa784c46b463",
+      "size": 24279916
+    },
+    "target-headers": {
+      "path": "headers-v1.tar.gz",
+      "sha256": "381b333357aba64848621146991cfce525aef049b11c531abb6a5f95abf92c45",
+      "size": 22715990
+    },
+    "asc-devkit": {
+      "path": "asc-devkit.tar.gz",
+      "sha256": "cd0cbc0a2fc24405762fbbcffddf7437fbaa4c4521bdb3b4d2577660ce7af3cb",
+      "size": 2915500
+    },
+    "cann-runtime": {
+      "path": "cann-runtime.tar.gz",
+      "sha256": "d441ffe75794fec9c9efd211a8bf158db148913d68439853674aee76e6ac0879",
+      "size": 57287
+    }
+  },
+  "profile": {
+    "schema_version": 1,
+    "profile_id": "bisheng-9.2.0-dav-2201-target-v5-case-sensitive-v2",
+    "elfuse_sha256": "d19f7bf2fe0abe675e1bf729d1cb0c20e3eb6525319b0ddfc93d189919ffb253",
+    "bisheng_guest": "/opt/cann/bisheng_compiler/bin/bisheng",
+    "bisheng_sha256": "fb635ef2090ff89f81c7962399b561d617c5a86417260c662d9bc6f84016f3c9",
+    "environment": [
+      "PATH=/opt/cann/bisheng_compiler/bin:/bin:/usr/bin",
+      "HOME=/workspace",
+      "TMPDIR=/tmp",
+      "LD_LIBRARY_PATH=/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu",
+      "ASCEND_HOME_PATH=/opt/cann"
+    ],
+    "compile_flags": [
+      "-O2",
+      "--npu-arch=dav-2201",
+      "-isystem",
+      "/usr/include/c++/12",
+      "-isystem",
+      "/usr/include/aarch64-linux-gnu/c++/12",
+      "-isystem",
+      "/usr/include/c++/12/backward",
+      "-I",
+      "/opt/cann/runtime/include",
+      "-I",
+      "/opt/cann/generated",
+      "-I",
+      "/opt/cann/asc-devkit",
+      "-I",
+      "/opt/cann/asc-devkit/include",
+      "-I",
+      "/opt/cann/asc-devkit/include/basic_api",
+      "-I",
+      "/opt/cann/asc-devkit/include/adv_api",
+      "-I",
+      "/opt/cann/asc-devkit/include/utils",
+      "-I",
+      "/opt/cann/asc-devkit/impl/basic_api",
+      "-I",
+      "/opt/cann/asc-devkit/impl/adv_api",
+      "-I",
+      "/opt/cann/asc-devkit/impl/utils"
+    ],
+    "link_flags": [
+      "--npu-arch=dav-2201",
+      "--sysroot={target}",
+      "-B{target}/usr/lib/gcc/aarch64-linux-gnu/13",
+      "-L{target}/usr/lib/gcc/aarch64-linux-gnu/13",
+      "-L{target}/home/developer/Ascend/cann-9.2.0/lib64",
+      "-Wl,-rpath-link,{target}/home/developer/Ascend/cann-9.2.0/lib64",
+      "-Wl,-rpath-link,{target}/lib/aarch64-linux-gnu",
+      "-Wl,-rpath-link,{target}/usr/lib/aarch64-linux-gnu"
+    ],
+    "timeout_seconds": 180,
+    "known_limitations": [
+      "target sysroot uses host-path fallback",
+      "reconstructed from saved archives; five unrelated header symlinks absent",
+      "hardware validation covers only the recorded 910B3 cases; v2 differs from tested v1 only in metadata",
+      "BiSheng -M captures emitted external headers, not all compiler file reads or absent include probes",
+      "publication requires an explicitly initialized private recovery key and marker; key loss requires recovery or manual inspection"
+    ],
+    "required_target_files": [
+      "usr/lib/gcc/aarch64-linux-gnu/13/crtbeginS.o",
+      "usr/lib/gcc/aarch64-linux-gnu/13/crtendS.o",
+      "usr/lib/gcc/aarch64-linux-gnu/13/libgcc.a",
+      "lib/aarch64-linux-gnu/Scrt1.o",
+      "lib/aarch64-linux-gnu/crti.o",
+      "lib/aarch64-linux-gnu/crtn.o",
+      "usr/include/c++/13/cstdint",
+      "home/developer/Ascend/cann-9.2.0/lib64/libascendc_runtime.a",
+      "home/developer/Ascend/cann-9.2.0/lib64/libascendcl.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libruntime.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/liberror_manager.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libprofapi.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libunified_dlog.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libmmpa.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libascend_dump.so",
+      "home/developer/Ascend/cann-9.2.0/lib64/libc_sec.so"
+    ],
+    "elfuse_commit": "33471885ceefd0e59ed81289aee28d8506f503d0",
+    "bisheng_version": "9.2.0 (clang 15.0.5)"
+  },
+  "sources": {
+    "asc-devkit": "a63d5261c7c8077a0081e867f43a0e884fec066b",
+    "cann-runtime": "09c468b359b0e393f15436d7e1fc8eb9a77bcab0",
+    "elfuse": "33471885ceefd0e59ed81289aee28d8506f503d0"
+  },
+  "provenance": "Debian Release signature was not verified. Target archives are saved laboratory snapshots, not independent vendor packages. The elfuse binary is pinned, not rebuilt by this recipe."
+}

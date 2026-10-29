@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.pkg
+*.deb
+*.tar
+*.tar.gz
+*.zip
+*.elf
+*.sparsebundle/
+inputs/
+private/
+.cannc/
+.canncc/
